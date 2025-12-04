@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Consulting - MayMay Consulting Dubai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0038A8;
+            --secondary-color: #0055CC;
+            --accent-color: #1E90FF;
+            --light-color: #FFFFFF;
+            --dark-color: #002244;
+            --gray-color: #F8FAFC;
+            --text-color: #333333;
+            --border-radius: 12px;
+            --box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { font-family:'Open Sans',sans-serif; line-height:1.7; color:var(--text-color); background:var(--light-color); overflow-x:hidden; }
+        .container { width:90%; max-width:1300px; margin:0 auto; padding:0 20px; }
+
+        /* ==================== NAVBAR ==================== */
+        .navbar {
+            background:rgba(255,255,255,0.98);
+            backdrop-filter:blur(15px);
+            box-shadow:0 4px 30px rgba(0,0,0,0.08);
+            position:fixed; width:100%; top:0; z-index:1000;
+            transition:var(--transition);
+            border-bottom:1px solid rgba(255,255,255,0.2);
+        }
+        .nav-container { display:flex; justify-content:space-between; align-items:center; padding:1rem 0; }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 3px solid white;
+            border-radius: 4px;
+            transform: rotate(45deg);
+        }
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            bottom: 8px;
+            right: 8px;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-main {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+        .logo-sub {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+        .nav-menu { display:flex; gap:2rem; list-style:none; align-items:center; }
+        .nav-menu a { color:var(--dark-color); text-decoration:none; font-weight:600; font-size:1rem; font-family:'Montserrat',sans-serif; position:relative; padding:8px 0; transition:var(--transition); }
+        .nav-menu a:hover, .nav-menu a.active { color:var(--primary-color); }
+        .nav-menu a::after { content:''; position:absolute; width:0; height:3px; bottom:0; left:0; background:linear-gradient(90deg,var(--primary-color),var(--secondary-color)); transition:var(--transition); border-radius:2px; }
+        .nav-menu a:hover::after, .nav-menu a.active::after { width:100%; }
+        .nav-cta { background:linear-gradient(135deg,var(--primary-color),var(--secondary-color)); color:white!important; padding:10px 24px!important; border-radius:8px; margin-left:1rem; box-shadow:0 4px 15px rgba(0,51,102,0.3); }
+        .nav-cta:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(0,51,102,0.4); }
+        .hamburger { display:none; flex-direction:column; cursor:pointer; padding:8px; background:rgba(255,255,255,0.9); border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+        .hamburger span { width:25px; height:3px; background:var(--dark-color); margin:3px 0; transition:var(--transition); border-radius:2px; }
+
+        /* ==================== HERO MARKETING AVEC BACKGROUND IMAGE ==================== */
+        .marketing-hero {
+            position:relative;
+            margin-top:90px;
+            height:550px;
+            overflow:hidden;
+            background: linear-gradient(rgba(0, 56, 168, 0.7), rgba(0, 56, 168, 0.7)), url('img_maymay13.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .marketing-hero-content {
+            position:absolute;
+            top:0; left:0; width:100%; height:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            padding:2rem;
+            color:white;
+        }
+        .marketing-hero h1 {
+            font-size:4rem;
+            font-weight:800;
+            font-family:'Montserrat',sans-serif;
+            margin-bottom:1.5rem;
+            line-height:1.1;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+        .marketing-hero p {
+            font-size:1.4rem;
+            margin-bottom:2rem;
+            opacity:0.95;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* ==================== BUTTONS ==================== */
+        .btn-primary, .btn-secondary {
+            display:inline-block;
+            padding:18px 40px;
+            border-radius:var(--border-radius);
+            text-decoration:none;
+            font-weight:700;
+            font-family:'Montserrat',sans-serif;
+            font-size:1.1rem;
+            transition:var(--transition);
+        }
+        .btn-primary {
+            background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));
+            color:white;
+            box-shadow:0 8px 25px rgba(0,0,0,0.2);
+        }
+        .btn-primary:hover { transform:translateY(-5px); box-shadow:0 15px 35px rgba(0,0,0,0.3); }
+        .btn-secondary {
+            background:transparent;
+            color:white;
+            border:2px solid white;
+        }
+        .btn-secondary:hover { background:white; color:var(--primary-color); }
+
+        /* ==================== SECTIONS GÉNÉRALES ==================== */
+        .section { padding:100px 0; }
+        .section-light { background:var(--gray-color); }
+        .section-title {
+            text-align:center;
+            font-size:3rem;
+            margin-bottom:1.5rem;
+            color:var(--primary-color);
+            position:relative;
+            font-weight:800;
+            font-family:'Montserrat',sans-serif;
+        }
+        .section-title::before {
+            content:'';
+            position:absolute;
+            width:60px;
+            height:4px;
+            background:linear-gradient(90deg,var(--primary-color),var(--secondary-color));
+            bottom:-15px;
+            left:50%;
+            transform:translateX(-50%);
+            border-radius:2px;
+        }
+        .section-subtitle {
+            text-align:center;
+            font-size:1.3rem;
+            margin-bottom:4rem;
+            color:var(--text-color);
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+            line-height:1.6;
+        }
+
+        /* Service Content */
+        .service-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+            margin-bottom: 6rem;
+        }
+        .service-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        .service-details h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .service-details p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .service-features {
+            margin: 2rem 0;
+        }
+        .service-features li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .service-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* Process Section */
+        .process-steps { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+            margin-top: 3rem; 
+        }
+        .process-step { 
+            flex: 1; 
+            min-width: 250px; 
+            text-align: center; 
+            padding: 0 1.5rem; 
+            margin-bottom: 3rem; 
+        }
+        .step-number { 
+            width: 80px; 
+            height: 80px; 
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
+            color: white; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 2rem; 
+            font-weight: bold; 
+            margin: 0 auto 2rem; 
+            box-shadow: var(--box-shadow); 
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        .stat-card {
+            background: white;
+            padding: 2.5rem 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .stat-card:hover {
+            transform: translateY(-8px);
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        /* CTA & Footer */
+        .cta { 
+            padding: 120px 0; 
+            background: linear-gradient(135deg, var(--primary-color), #004080); 
+            color: white; 
+            text-align: center; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        .cta::before { 
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,138.7C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>'); 
+            background-size: cover; 
+        }
+        
+        /* FOOTER - Liens en blanc */
+        footer { 
+            background: linear-gradient(135deg, var(--primary-color), #001F3F); 
+            color: white; 
+            padding: 5rem 0 2rem; 
+        }
+        .footer-content { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 40px; 
+            margin-bottom: 50px; 
+        }
+        
+        /* Styles pour les liens du footer en blanc */
+        footer a { 
+            color: white !important; 
+            text-decoration: none; 
+            transition: var(--transition); 
+        }
+        footer a:hover { 
+            color: var(--accent-color) !important; 
+        }
+        footer ul { 
+            list-style: none; 
+        }
+        footer ul li { 
+            margin-bottom: 12px; 
+        }
+        .footer-logo { 
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+        }
+        .footer-logo .logo-icon {
+            width: 36px;
+            height: 36px;
+        }
+        .footer-logo .logo-icon::before {
+            width: 16px;
+            height: 16px;
+            border-width: 2px;
+        }
+        .footer-logo .logo-icon::after {
+            width: 6px;
+            height: 6px;
+            bottom: 6px;
+            right: 6px;
+        }
+        .footer-logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-logo-main {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1;
+        }
+        .footer-logo-sub {
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+        .contact-info li { 
+            margin-bottom: 10px; 
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .marketing-hero h1 { font-size: 3.5rem; }
+            .marketing-hero {  
+             background: linear-gradient(rgba(0, 56, 168, 0.7), rgba(0, 56, 168, 0.7)), url('img_maymay12.jpg');
+            height: 450px; }
+            .service-content { grid-template-columns: 1fr; gap: 3rem; }
+        }
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-menu { 
+                position: fixed; 
+                left: -100%; 
+                top: 80px; 
+                flex-direction: column; 
+                background: rgba(255,255,255,0.98); 
+                width: 100%; 
+                padding: 3rem 0; 
+                transition: var(--transition); 
+            }
+            .nav-menu.active { left: 0; }
+            .marketing-hero h1 { font-size: 2.8rem; }
+            .marketing-hero p { font-size: 1.2rem; }
+            .marketing-hero { height: 400px; }
+            .process-steps { flex-direction: column; }
+            .logo-main { font-size: 1.5rem; }
+        }
+        @media (max-width: 480px) {
+            .marketing-hero h1 { font-size: 2.3rem; }
+            .marketing-hero p { font-size: 1.1rem; }
+            .marketing-hero { height: 350px; }
+            .section-title { font-size: 2.5rem; }
+            .logo { gap: 10px; }
+            .logo-main { font-size: 1.3rem; }
+            .logo-icon { width: 38px; height: 38px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"></div>
+                        <div class="logo-text">
+                            <div class="logo-main">MayMay</div>
+                            <div class="logo-sub">Consulting</div>
+                        </div>
+                    </a>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html" class="nav-cta">Free Consultation</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO MARKETING AVEC BACKGROUND IMAGE -->
+    <section class="marketing-hero">
+        <div class="marketing-hero-content container">
+            <div>
+                <h1>Marketing Consulting Services</h1>
+                <p>Transform your brand presence and drive growth with strategic marketing solutions in Dubai</p>
+                <a href="#contact" class="btn-primary">Get Marketing Strategy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE CONTENT -->
+    <section class="section">
+        <div class="container">
+            <div class="service-content">
+                <div>
+                    <img src="img_maymay12.jpg" alt="Marketing Consulting Dubai" class="service-image">
+                </div>
+                <div class="service-details">
+                    <h2>Strategic Marketing Solutions</h2>
+                    <p>We specialize in creating innovative marketing campaigns that resonate with UAE audiences while driving measurable business results and ROI.</p>
+                    
+                    <h3>Our Marketing Expertise</h3>
+                    <ul class="service-features">
+                        <li>Digital marketing strategy and implementation</li>
+                        <li>Brand development and positioning in UAE market</li>
+                        <li>Social media marketing and community management</li>
+                        <li>Content marketing and SEO optimization</li>
+                        <li>Marketing analytics and performance tracking</li>
+                        
+                    </ul>
+
+                    <a href="contact.html" class="btn-primary">Schedule Marketing Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Marketing Impact & Results</h2>
+            <p class="section-subtitle">Our marketing strategies deliver measurable growth for businesses in Dubai</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">65%</div>
+                    <div class="stat-label">Increase in Brand Awareness</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">45%</div>
+                    <div class="stat-label">Growth in Lead Generation</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">ROI on Marketing Spend</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Reduction in Customer Acquisition Cost</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Marketing Process</h2>
+            <p class="section-subtitle">A proven methodology for driving marketing success in the UAE market</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Market Analysis</h3>
+                    <p>Comprehensive research of your market, competitors, and target audience in the UAE.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Strategy Development</h3>
+                    <p>Custom marketing strategy tailored to your business goals and market opportunities.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Campaign Execution</h3>
+                    <p>Implementation of integrated marketing campaigns across multiple channels.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Performance Optimization</h3>
+                    <p>Continuous monitoring and optimization based on data-driven insights and results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Marketing Strategy?</h2>
+                <p>Contact us today for a free marketing consultation and discover how we can accelerate your business growth.</p>
+                <a href="contact.html" class="btn-secondary">Free Marketing Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon"></div>
+                        <div class="footer-logo-text">
+                            <div class="footer-logo-main">MayMay</div>
+                            <div class="footer-logo-sub">Consulting</div>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for success in Dubai and the Gulf region. Local expertise, international solutions.</p>
+                    <div class="contact-info">
+                        <ul>
+                            <li>Dubai, United Arab Emirates</li>
+                            <li>+971 56 490 9055</li>
+                            <li>contact@maymayconsulting.ae</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.html">Free Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="service-legal.html">Legal Consulting</a></li>
+                        <li><a href="service-financial.html">Financial Consulting</a></li>
+                        <li><a href="service-marketing.html">Marketing Consulting</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 MayMay Consulting Dubai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            });
+            document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }));
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                if (window.scrollY > 100) {
+                    navbar.style.padding = '0.5rem 0';
+                    navbar.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.12)';
+                } else {
+                    navbar.style.padding = '1rem 0';
+                    navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.08)';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
