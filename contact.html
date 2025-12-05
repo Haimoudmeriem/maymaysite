@@ -23,7 +23,6 @@
         html { scroll-behavior:smooth; }
         body { font-family:'Open Sans',sans-serif; line-height:1.7; color:var(--text-color); background:var(--light-color); overflow-x:hidden; }
         .container { width:90%; max-width:1300px; margin:0 auto; padding:0 20px; }
-
         /* ==================== NAVBAR ==================== */
         .navbar {
             background:rgba(255,255,255,0.98);
@@ -51,29 +50,6 @@
             position: relative;
             overflow: hidden;
         }
-        /* SUPPRIMÉ : Le carré blanc qui était ici */
-        /* .logo-icon::before {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border: 3px solid white;
-            border-radius: 4px;
-            transform: rotate(45deg);
-        } */
-        
-        /* SUPPRIMÉ : Le point blanc qui était ici */
-        /* .logo-icon::after {
-            content: '';
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: white;
-            border-radius: 50%;
-            bottom: 8px;
-            right: 8px;
-        } */
-        
         .logo-text {
             display: flex;
             flex-direction: column;
@@ -103,7 +79,6 @@
         .nav-cta:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(0,51,102,0.4); }
         .hamburger { display:none; flex-direction:column; cursor:pointer; padding:8px; background:rgba(255,255,255,0.9); border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
         .hamburger span { width:25px; height:3px; background:var(--dark-color); margin:3px 0; transition:var(--transition); border-radius:2px; }
-
         /* ==================== HERO CONTACT AVEC BACKGROUND IMAGE ==================== */
         .contact-hero {
             position:relative;
@@ -142,7 +117,6 @@
             margin-right:auto;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
-
         /* ==================== BUTTONS ==================== */
         .btn-primary, .btn-secondary {
             display:inline-block;
@@ -160,8 +134,7 @@
             box-shadow:0 8px 25px rgba(0,0,0,0.2);
         }
         .btn-primary:hover { transform:translateY(-5px); box-shadow:0 15px 35px rgba(0,0,0,0.3); }
-        
-        /* Style amélioré pour le bouton "Call Us Now" */
+       
         .btn-secondary {
             display: inline-flex;
             align-items: center;
@@ -174,8 +147,8 @@
             position: relative;
             z-index: 10;
         }
-        .btn-secondary:hover { 
-            background:white; 
+        .btn-secondary:hover {
+            background:white;
             color:var(--primary-color);
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
@@ -183,7 +156,6 @@
         .btn-secondary i {
             font-size: 1.2rem;
         }
-
         /* ==================== SECTIONS GÉNÉRALES ==================== */
         .section { padding:100px 0; }
         .section-light { background:var(--gray-color); }
@@ -217,7 +189,6 @@
             margin-right:auto;
             line-height:1.6;
         }
-
         /* Contact Content */
         .contact-content {
             display: grid;
@@ -282,7 +253,6 @@
         .contact-text a:hover {
             color: var(--primary-color);
         }
-
         /* Contact Form */
         .contact-form {
             background: white;
@@ -335,8 +305,7 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
-        
-        /* Message de confirmation */
+       
         .form-message {
             display: none;
             padding: 1rem;
@@ -355,7 +324,6 @@
             color: #721c24;
             border: 1px solid #f5c6cb;
         }
-
         /* Map Section */
         .map-section {
             margin-top: 5rem;
@@ -372,7 +340,6 @@
             height: 100%;
             border: none;
         }
-
         /* FAQ Section */
         .faq-section {
             margin-top: 6rem;
@@ -399,25 +366,24 @@
             color: var(--text-color);
             line-height: 1.6;
         }
-
         /* CTA SECTION - AMÉLIORÉE POUR LE BOUTON TÉLÉPHONE */
-        .cta { 
-            padding: 120px 0; 
-            background: linear-gradient(135deg, var(--primary-color), #004080); 
-            color: white; 
-            text-align: center; 
-            position: relative; 
-            overflow: hidden; 
+        .cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--primary-color), #004080);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        .cta::before { 
-            content: ''; 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,138.7C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>'); 
-            background-size: cover; 
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,138.7C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
         }
         .cta-content {
             position: relative;
@@ -446,36 +412,35 @@
             justify-content: center;
             gap: 8px;
         }
-        
+       
         /* FOOTER - Liens en blanc */
-        footer { 
-            background: linear-gradient(135deg, var(--primary-color), #001F3F); 
-            color: white; 
-            padding: 5rem 0 2rem; 
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), #001F3F);
+            color: white;
+            padding: 5rem 0 2rem;
         }
-        .footer-content { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 40px; 
-            margin-bottom: 50px; 
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
         }
-        
-        /* Styles pour les liens du footer en blanc */
-        footer a { 
-            color: white !important; 
-            text-decoration: none; 
-            transition: var(--transition); 
+       
+        footer a {
+            color: white !important;
+            text-decoration: none;
+            transition: var(--transition);
         }
-        footer a:hover { 
-            color: var(--accent-color) !important; 
+        footer a:hover {
+            color: var(--accent-color) !important;
         }
-        footer ul { 
-            list-style: none; 
+        footer ul {
+            list-style: none;
         }
-        footer ul li { 
-            margin-bottom: 12px; 
+        footer ul li {
+            margin-bottom: 12px;
         }
-        .footer-logo { 
+        .footer-logo {
             display: flex;
             align-items: center;
             gap: 12px;
@@ -485,18 +450,6 @@
             width: 36px;
             height: 36px;
         }
-        /* SUPPRIMÉ pour le footer aussi */
-        /* .footer-logo .logo-icon::before {
-            width: 16px;
-            height: 16px;
-            border-width: 2px;
-        }
-        .footer-logo .logo-icon::after {
-            width: 6px;
-            height: 6px;
-            bottom: 6px;
-            right: 6px;
-        } */
         .footer-logo-text {
             display: flex;
             flex-direction: column;
@@ -516,10 +469,9 @@
             text-transform: uppercase;
             margin-top: 2px;
         }
-        .contact-info li { 
-            margin-bottom: 10px; 
+        .contact-info li {
+            margin-bottom: 10px;
         }
-
         /* Responsive */
         @media (max-width: 992px) {
             .contact-hero h1 { font-size: 3.5rem; }
@@ -529,15 +481,15 @@
         }
         @media (max-width: 768px) {
             .hamburger { display: flex; }
-            .nav-menu { 
-                position: fixed; 
-                left: -100%; 
-                top: 80px; 
-                flex-direction: column; 
-                background: rgba(255,255,255,0.98); 
-                width: 100%; 
-                padding: 3rem 0; 
-                transition: var(--transition); 
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: rgba(255,255,255,0.98);
+                width: 100%;
+                padding: 3rem 0;
+                transition: var(--transition);
             }
             .nav-menu.active { left: 0; }
             .contact-hero h1 { font-size: 2.8rem; }
@@ -548,9 +500,9 @@
             .logo-main { font-size: 1.5rem; }
             .cta h2 { font-size: 2.3rem; }
             .cta p { font-size: 1.1rem; }
-            .btn-secondary { 
-                padding: 16px 32px; 
-                font-size: 1rem; 
+            .btn-secondary {
+                padding: 16px 32px;
+                font-size: 1rem;
                 min-height: 55px;
                 display: flex;
                 align-items: center;
@@ -567,15 +519,14 @@
             .logo-main { font-size: 1.3rem; }
             .logo-icon { width: 38px; height: 38px; }
             .cta h2 { font-size: 2rem; }
-            .btn-secondary { 
-                padding: 14px 28px; 
-                font-size: 0.95rem; 
+            .btn-secondary {
+                padding: 14px 28px;
+                font-size: 0.95rem;
             }
         }
     </style>
 </head>
 <body>
-
     <!-- NAVBAR -->
     <header>
         <nav class="navbar">
@@ -602,7 +553,6 @@
             </div>
         </nav>
     </header>
-
     <!-- HERO CONTACT AVEC BACKGROUND IMAGE -->
     <section class="contact-hero">
         <div class="contact-hero-content container">
@@ -613,7 +563,6 @@
             </div>
         </div>
     </section>
-
     <!-- CONTACT CONTENT -->
     <section class="section">
         <div class="container">
@@ -632,7 +581,7 @@
                                 <p>United Arab Emirates</p>
                             </div>
                         </div>
-                        
+                       
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-phone"></i>
@@ -643,7 +592,7 @@
                                 <p>Sun-Thu: 9AM - 6PM</p>
                             </div>
                         </div>
-                        
+                       
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
@@ -654,7 +603,7 @@
                                 <p>Response within 24 hours</p>
                             </div>
                         </div>
-                        
+                       
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-clock"></i>
@@ -666,7 +615,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                   
                     <div class="social-links">
                         <h4>Follow Us</h4>
                         <div style="display: flex; gap: 1rem; margin-top: 1rem;">
@@ -677,7 +626,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Contact Form -->
                 <div class="contact-form" id="contact-form">
                     <h3>Send Us a Message</h3>
@@ -686,17 +634,17 @@
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" class="form-control" required>
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label for="email">Email Address *</label>
                             <input type="email" id="email" name="email" class="form-control" required>
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone" class="form-control">
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label for="service">Service Interested In</label>
                             <select id="service" name="service" class="form-control">
@@ -708,24 +656,23 @@
                                 <option value="Other">Other</option>
                             </select>
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label for="message">Your Message *</label>
                             <textarea id="message" name="message" class="form-control" required></textarea>
                         </div>
-                        
+                       
                         <input type="hidden" name="_subject" value="New Contact Form - MayMay Consulting Dubai">
                         <input type="hidden" name="_replyto" value="contact@maymayconsulting.ae">
-                        
+                       
                         <button type="submit" class="form-submit">Send Message</button>
                     </form>
-                    
+                   
                     <div style="margin-top: 2rem; padding: 1rem; background: #f8f9fa; border-radius: var(--border-radius); font-size: 0.9rem;">
                         <p style="margin: 0;"><strong>Note:</strong> After sending, you'll be redirected to Formspree's confirmation page. We'll contact you within 24 hours.</p>
                     </div>
                 </div>
             </div>
-
             <!-- Map Section -->
             <div class="map-section">
                 <h3 class="section-title">Our Location</h3>
@@ -733,7 +680,6 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.620963925297!2d55.27055631500884!3d25.18857198390222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ceb7e2!2sBurj%20Khalifa%2C%20Dubai%2C%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-
             <!-- FAQ Section -->
             <div class="faq-section">
                 <h3 class="section-title">Frequently Asked Questions</h3>
@@ -742,17 +688,17 @@
                         <h4>How quickly do you respond?</h4>
                         <p>We respond within 24 hours on business days. For urgent matters, call us directly.</p>
                     </div>
-                    
+                   
                     <div class="faq-item">
                         <h4>Do you offer free consultations?</h4>
                         <p>Yes, we offer complimentary initial consultations to discuss your business needs.</p>
                     </div>
-                    
+                   
                     <div class="faq-item">
                         <h4>What areas do you serve?</h4>
                         <p>We serve clients throughout Dubai and the wider UAE, including all Emirates.</p>
                     </div>
-                    
+                   
                     <div class="faq-item">
                         <h4>Can you help with business setup?</h4>
                         <p>Absolutely! Business setup and registration are core services we provide.</p>
@@ -761,19 +707,18 @@
             </div>
         </div>
     </section>
-
     <!-- CTA SECTION AVEC BOUTON "CALL US NOW" -->
     <section class="cta">
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to Start Your Dubai Success Story?</h2>
                 <p>Contact us today for a free consultation and discover how we can help your business thrive.</p>
-                
+               
                 <a href="tel:+971564909055" class="btn-secondary">
                     <i class="fas fa-phone-alt"></i>
                     Call Us Now: +971 56 490 9055
                 </a>
-                
+               
                 <p class="phone-note">
                     <i class="fas fa-info-circle"></i>
                     Click to call on mobile | Number will be shown on desktop
@@ -781,7 +726,6 @@
             </div>
         </div>
     </section>
-
     <!-- FOOTER -->
     <footer>
         <div class="container">
@@ -828,27 +772,27 @@
             </div>
         </div>
     </footer>
-    
+   
     <!-- SCRIPT -->
     <script>
         // Navigation mobile
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
-        
+       
         if (hamburger && navMenu) {
             hamburger.addEventListener('click', () => {
                 hamburger.classList.toggle('active');
                 navMenu.classList.toggle('active');
                 document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
             });
-            
+           
             document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.style.overflow = '';
             }));
         }
-        
+       
         // Effet de scroll sur la navbar
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
@@ -862,14 +806,14 @@
                 }
             }
         });
-        
+       
         // Animation douce pour les ancres
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+               
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -879,20 +823,19 @@
                 }
             });
         });
-
         // Gestion des liens téléphone
         document.addEventListener('DOMContentLoaded', function() {
             const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-            
+           
             phoneLinks.forEach(link => {
                 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                
+               
                 if (!isMobile) {
                     link.addEventListener('click', function(e) {
                         e.preventDefault();
                         const phoneNumber = this.getAttribute('href').replace('tel:', '');
                         const formattedNumber = phoneNumber.replace(/(\d{3})(\d{2})(\d{3})(\d{4})/, '+$1 $2 $3 $4');
-                        
+                       
                         const modal = document.createElement('div');
                         modal.style.cssText = `
                             position: fixed;
@@ -906,7 +849,7 @@
                             justify-content: center;
                             z-index: 9999;
                         `;
-                        
+                       
                         const modalContent = document.createElement('div');
                         modalContent.style.cssText = `
                             background: white;
@@ -916,7 +859,7 @@
                             max-width: 400px;
                             width: 90%;
                         `;
-                        
+                       
                         modalContent.innerHTML = `
                             <h3 style="color: var(--primary-color); margin-bottom: 20px; font-family: 'Montserrat', sans-serif;">Call MayMay Consulting</h3>
                             <p style="font-size: 1.5rem; font-weight: bold; margin: 20px 0; color: #333;">${formattedNumber}</p>
@@ -925,10 +868,10 @@
                                 <button id="closeModal" style="padding: 10px 20px; background: #f1f1f1; color: #333; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">Close</button>
                             </div>
                         `;
-                        
+                       
                         modal.appendChild(modalContent);
                         document.body.appendChild(modal);
-                        
+                       
                         document.getElementById('copyPhone').addEventListener('click', function() {
                             navigator.clipboard.writeText(phoneNumber).then(() => {
                                 const copyBtn = document.getElementById('copyPhone');
@@ -940,11 +883,11 @@
                                 }, 2000);
                             });
                         });
-                        
+                       
                         document.getElementById('closeModal').addEventListener('click', () => {
                             document.body.removeChild(modal);
                         });
-                        
+                       
                         modal.addEventListener('click', (e) => {
                             if (e.target === modal) {
                                 document.body.removeChild(modal);
@@ -955,7 +898,5 @@
             });
         });
     </script>
-
 </body>
 </html>
-
