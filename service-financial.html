@@ -23,7 +23,6 @@
         html { scroll-behavior:smooth; }
         body { font-family:'Open Sans',sans-serif; line-height:1.7; color:var(--text-color); background:var(--light-color); overflow-x:hidden; }
         .container { width:90%; max-width:1300px; margin:0 auto; padding:0 20px; }
-
         /* ==================== NAVBAR ==================== */
         .navbar {
             background:rgba(255,255,255,0.98);
@@ -99,14 +98,13 @@
         .nav-cta:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(0,51,102,0.4); }
         .hamburger { display:none; flex-direction:column; cursor:pointer; padding:8px; background:rgba(255,255,255,0.9); border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
         .hamburger span { width:25px; height:3px; background:var(--dark-color); margin:3px 0; transition:var(--transition); border-radius:2px; }
-
         /* ==================== HERO FINANCIAL AVEC BACKGROUND IMAGE ==================== */
         .financial-hero {
             position:relative;
             margin-top:90px;
             height:500px;
             overflow:hidden;
-            background: linear-gradient(rgba(0, 56, 168, 0.7), rgba(0, 56, 168, 0.7)), url('images/img_maymay11.webp');
+            background: linear-gradient(rgba(0, 56, 168, 0.7), rgba(0, 56, 168, 0.7)), url('img_maymay11.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -138,7 +136,6 @@
             margin-right:auto;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
-
         /* ==================== BUTTONS ==================== */
         .btn-primary, .btn-secondary {
             display:inline-block;
@@ -149,12 +146,6 @@
             font-family:'Montserrat',sans-serif;
             font-size:1.1rem;
             transition:var(--transition);
-             cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-    text-align: center;
-    position: relative;
-    z-index: 1000;
         }
         .btn-primary {
             background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));
@@ -168,7 +159,6 @@
             border:2px solid white;
         }
         .btn-secondary:hover { background:white; color:var(--primary-color); }
-
         /* ==================== SECTIONS GÉNÉRALES ==================== */
         .section { padding:100px 0; }
         .section-light { background:var(--gray-color); }
@@ -202,7 +192,6 @@
             margin-right:auto;
             line-height:1.6;
         }
-
         /* Service Content */
         .service-content {
             display: grid;
@@ -244,36 +233,34 @@
             color: var(--secondary-color);
             font-weight: bold;
         }
-
         /* Process Section */
-        .process-steps { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: space-between; 
-            margin-top: 3rem; 
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 3rem;
         }
-        .process-step { 
-            flex: 1; 
-            min-width: 250px; 
-            text-align: center; 
-            padding: 0 1.5rem; 
-            margin-bottom: 3rem; 
+        .process-step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 0 1.5rem;
+            margin-bottom: 3rem;
         }
-        .step-number { 
-            width: 80px; 
-            height: 80px; 
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
-            color: white; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 2rem; 
-            font-weight: bold; 
-            margin: 0 auto 2rem; 
-            box-shadow: var(--box-shadow); 
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 2rem;
+            box-shadow: var(--box-shadow);
         }
-
         /* Stats Section */
         .stats-grid {
             display: grid;
@@ -303,56 +290,54 @@
             color: var(--text-color);
             font-weight: 600;
         }
-
         /* CTA & Footer */
-        .cta { 
-            padding: 120px 0; 
-            background: linear-gradient(135deg, var(--primary-color), #004080); 
-            color: white; 
-            text-align: center; 
-            position: relative; 
-            overflow: hidden; 
+        .cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--primary-color), #004080);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        .cta::before { 
-            content: ''; 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,138.7C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>'); 
-            background-size: cover; 
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,192C672,181,768,139,864,138.7C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
         }
-        
+       
         /* FOOTER - Liens en blanc */
-        footer { 
-            background: linear-gradient(135deg, var(--primary-color), #001F3F); 
-            color: white; 
-            padding: 5rem 0 2rem; 
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), #001F3F);
+            color: white;
+            padding: 5rem 0 2rem;
         }
-        .footer-content { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 40px; 
-            margin-bottom: 50px; 
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
         }
-        
-        /* Styles pour les liens du footer en blanc */
-        footer a { 
-            color: white !important; 
-            text-decoration: none; 
-            transition: var(--transition); 
+       
+        footer a {
+            color: white !important;
+            text-decoration: none;
+            transition: var(--transition);
         }
-        footer a:hover { 
-            color: var(--accent-color) !important; 
+        footer a:hover {
+            color: var(--accent-color) !important;
         }
-        footer ul { 
-            list-style: none; 
+        footer ul {
+            list-style: none;
         }
-        footer ul li { 
-            margin-bottom: 12px; 
+        footer ul li {
+            margin-bottom: 12px;
         }
-        .footer-logo { 
+        .footer-logo {
             display: flex;
             align-items: center;
             gap: 12px;
@@ -392,10 +377,9 @@
             text-transform: uppercase;
             margin-top: 2px;
         }
-        .contact-info li { 
-            margin-bottom: 10px; 
+        .contact-info li {
+            margin-bottom: 10px;
         }
-
         /* Responsive */
         @media (max-width: 992px) {
             .financial-hero h1 { font-size: 3.5rem; }
@@ -404,15 +388,15 @@
         }
         @media (max-width: 768px) {
             .hamburger { display: flex; }
-            .nav-menu { 
-                position: fixed; 
-                left: -100%; 
-                top: 80px; 
-                flex-direction: column; 
-                background: rgba(255,255,255,0.98); 
-                width: 100%; 
-                padding: 3rem 0; 
-                transition: var(--transition); 
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: rgba(255,255,255,0.98);
+                width: 100%;
+                padding: 3rem 0;
+                transition: var(--transition);
             }
             .nav-menu.active { left: 0; }
             .financial-hero h1 { font-size: 2.8rem; }
@@ -433,7 +417,6 @@
     </style>
 </head>
 <body>
-
     <!-- NAVBAR -->
     <header>
         <nav class="navbar">
@@ -460,7 +443,6 @@
             </div>
         </nav>
     </header>
-
     <!-- HERO FINANCIAL AVEC BACKGROUND IMAGE -->
     <section class="financial-hero">
         <div class="financial-hero-content container">
@@ -471,19 +453,18 @@
             </div>
         </div>
     </section>
-
     <!-- SERVICE CONTENT -->
     <section class="section">
         <div class="container">
             <div class="service-content">
                 <div>
-                    <img src="images/img_maymay5.webp" alt="Financial Consulting Dubai" class="service-image">
+                    <img src="img_maymay5.webp" alt="Financial Consulting Dubai" class="service-image">
                 </div>
                 <div class="service-details">
                     <h2>Strategic Financial Management</h2>
                     <p>Maximize your financial performance with our comprehensive consulting services tailored for the UAE market. Our financial experts provide data-driven insights to optimize your financial strategy.</p>
                     <p>We specialize in financial planning, analysis, and optimization strategies designed specifically for businesses operating in Dubai's dynamic economic environment.</p>
-                    
+                   
                     <h3>Our Financial Expertise</h3>
                     <ul class="service-features">
                         <li>Financial planning and budgeting for UAE businesses</li>
@@ -495,19 +476,17 @@
                         <li>Mergers and acquisitions financial advisory</li>
                         <li>Financial compliance and reporting</li>
                     </ul>
-
                     <a href="contact.html" class="btn-primary">Schedule Financial Consultation</a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- STATS SECTION -->
     <section class="section section-light">
         <div class="container">
             <h2 class="section-title">Proven Financial Results</h2>
             <p class="section-subtitle">Our financial strategies deliver measurable impact for businesses in Dubai</p>
-            
+           
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number">25%</div>
@@ -528,13 +507,12 @@
             </div>
         </div>
     </section>
-
     <!-- PROCESS SECTION -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Our Financial Process</h2>
             <p class="section-subtitle">A structured approach to optimizing your financial performance</p>
-            
+           
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
@@ -559,7 +537,6 @@
             </div>
         </div>
     </section>
-
     <!-- CTA SECTION -->
     <section class="cta" id="contact">
         <div class="container">
@@ -570,7 +547,6 @@
             </div>
         </div>
     </section>
-
     <!-- FOOTER -->
     <footer>
         <div class="container">
@@ -617,7 +593,6 @@
             </div>
         </div>
     </footer>
-
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
