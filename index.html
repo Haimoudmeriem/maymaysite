@@ -205,7 +205,8 @@
         line-height:1.6;
     }
 
-    /* Services, Values, Testimonials */
+    
+    /* Services, Values, Testimonials - MODIFICATION DES CARTES DE SERVICES */
     .services-grid, .values-grid, .testimonials-grid {
         display:grid;
         grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
@@ -232,31 +233,189 @@
         color:var(--secondary-color);
     }
     
-    /* Services Cards Structure - Version brève */
-    .service-card h3 {
+    /* Services Cards Structure - NOUVELLE VERSION AMÉLIORÉE */
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-align: left;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .service-card-header {
+        padding: 2.5rem 2.5rem 1.5rem;
+        color: white;
+        position: relative;
+    }
+    
+    .service-card.legal .service-card-header {
+        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    }
+    
+    .service-card.financial .service-card-header {
+        background: linear-gradient(135deg, #047857, #10b981);
+    }
+    
+    .service-card.marketing .service-card-header {
+        background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+    }
+    
+    .service-icon-container {
+        width: 70px;
+        height: 70px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-card-header i {
+        font-size: 2.2rem;
+        color: white;
+        margin-bottom: 0;
+    }
+    
+    .service-card-header h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+        color: white;
+        font-family:'Montserrat',sans-serif;
+        font-weight: 700;
+    }
+    
+    .service-card-header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+    
+    .service-card-body {
+        padding: 2.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .service-features {
+        text-align: left;
+        margin-bottom: 2rem;
+        flex-grow: 1;
+        list-style: none;
+    }
+    
+    .service-features li {
+        margin-bottom: 0.8rem;
+        padding-left: 1.8rem;
+        position: relative;
+        font-size: 1rem;
+        color: var(--text-color);
+        line-height: 1.5;
+    }
+    
+    .service-card.legal .service-features li:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #3b82f6;
+    }
+    
+    .service-card.financial .service-features li:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #10b981;
+    }
+    
+    .service-card.marketing .service-features li:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #8b5cf6;
+    }
+    
+    .service-card .btn-primary {
+        width:100%;
+        padding:16px;
+        font-size:1rem;
+        font-weight: 700;
+        font-family:'Montserrat',sans-serif;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    
+    .service-card.legal .btn-primary {
+        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+        color: white;
+        box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+    }
+    
+    .service-card.legal .btn-primary:hover {
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(30, 58, 138, 0.4);
+    }
+    
+    .service-card.financial .btn-primary {
+        background: linear-gradient(135deg, #047857, #10b981);
+        color: white;
+        box-shadow: 0 6px 20px rgba(4, 120, 87, 0.3);
+    }
+    
+    .service-card.financial .btn-primary:hover {
+        background: linear-gradient(135deg, #065f46, #0d9c6f);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(4, 120, 87, 0.4);
+    }
+    
+    .service-card.marketing .btn-primary {
+        background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+        color: white;
+        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+    }
+    
+    .service-card.marketing .btn-primary:hover {
+        background: linear-gradient(135deg, #6d28d9, #7c3aed);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+    }
+    
+    /* Values Cards */
+    .value-card i {
+        font-size:3.5rem;
+        margin-bottom:2rem;
+        color:var(--secondary-color);
+    }
+    
+    .value-card h3 {
         font-size:1.6rem;
         margin-bottom:1rem;
         color:var(--primary-color);
         font-family:'Montserrat',sans-serif;
     }
-    .service-card > p {
+    
+    .value-card > p {
         font-size:1rem;
         margin-bottom:1.5rem;
         color:var(--text-color);
         line-height:1.5;
-    }
-    .service-features {
-        text-align:center;
-        margin-bottom:2rem;
-    }
-    .service-features li {
-        margin-bottom:0.6rem;
-        font-size:0.95rem;
-    }
-    .service-card .btn-primary {
-        width:100%;
-        padding:12px;
-        font-size:0.95rem;
     }
 
     /* About Section - Nouveau design créatif */
@@ -467,9 +626,7 @@
             font-size: 0.95rem;
         }
         
-        .service-card,
-        .value-card,
-        .testimonial-card {
+        .service-card, .value-card, .testimonial-card {
             padding: 20px 15px;
         }
         
@@ -495,6 +652,28 @@
         
         .process-step {
             min-width: 100%;
+        }
+        
+        .service-card-header {
+            padding: 1.5rem 1.5rem 1rem;
+        }
+        
+        .service-icon-container {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card-header i {
+            font-size: 1.5rem;
+        }
+        
+        .service-card-header h3 {
+            font-size: 1.3rem;
+        }
+        
+        .service-card-body {
+            padding: 1.5rem;
         }
     }
 
@@ -525,6 +704,10 @@
         
         .hero-banner {
             height: 520px;
+        }
+        
+        .service-card-header h3 {
+            font-size: 1.5rem;
         }
     }
 
@@ -800,6 +983,10 @@
         .service-features li {
             font-size: 0.95rem;
         }
+        
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
     }
 
     /* About section responsive améliorée */
@@ -936,6 +1123,14 @@
         textarea {
             font-size: 16px; /* Empêche le zoom automatique sur iOS */
         }
+        
+        .service-card .btn-primary:hover {
+            transform: none;
+        }
+        
+        .service-card .btn-primary:active {
+            transform: scale(0.98);
+        }
     }
 
     /* 9. DARK MODE SUPPORT */
@@ -969,6 +1164,7 @@
         
         .service-features li {
             border-color: #333;
+            color: #ddd;
         }
         
         .section-title,
@@ -983,6 +1179,10 @@
         .value-card p,
         .testimonial-text {
             color: #ccc;
+        }
+        
+        .service-card-body {
+            background-color: #1e1e1e;
         }
     }
 
@@ -1068,11 +1268,27 @@
     @media (max-width:480px) {
         .hero-content h1 { font-size:2.3rem; }
         .hero-banner { height:450px; }
-        .service-card { padding:2rem 1.5rem; }
+        .service-card, .value-card, .testimonial-card { padding:0; }
         .about-text h2 { font-size: 2.2rem; }
         .logo { gap: 10px; }
         .logo-main { font-size: 1.3rem; }
         .logo-icon { width: 38px; height: 38px; }
+    }
+    
+    /* Animation pour les cartes de service */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .service-card {
+        animation: fadeInUp 0.6s ease forwards;
     }
 </style>
 </head>
@@ -1109,12 +1325,12 @@
     <section class="hero-banner">
         <img src="img_maymay2.jpg" alt="MayMay Dubai - Your Success Partner">
         <div class="hero-overlay">
-            <div class="hero-content">
+            <div class="hero-content ">
                 <h1>Your Trusted Partner in Dubai</h1>
                 <p>Legal, financial and marketing consulting for success in UAE</p>
                 <div class="hero-buttons">
-                    <a href="services.html" class="btn-primary">Our Services</a>
-                    <a href="contact.html" class="btn-secondary">Free Consultation</a>
+                    <a href="#services" class="btn-primary">Our Services</a>
+                    <a href="#contact" class="btn-secondary">Free Consultation</a>
                 </div>
             </div>
         </div>
@@ -1126,38 +1342,67 @@
             <h2 class="section-title">Our Services</h2>
             <p class="section-subtitle">Integrated expertise in legal, financial and marketing consulting</p>
             <div class="services-grid">
-                <div class="service-card fade-in">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>Legal Consulting</h3>
-                    <p>Complete legal support for your business setup and compliance in UAE.</p>
-                    <ul class="service-features">
-                        <li>Business Setup & Licensing</li>
-                        <li>Contract Law & Compliance</li>
-                        <li>Intellectual Property</li>
-                    </ul>
-                    <a href="service-legal.html" class="btn-primary">Learn More</a>
+                <!-- Carte de conseil juridique - NOUVELLE VERSION -->
+                <div class="service-card legal fade-in">
+                    <div class="service-card-header">
+                        <div class="service-icon-container">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Legal Consulting</h3>
+                        <p>Complete legal support for your business setup and compliance in UAE.</p>
+                    </div>
+                    <div class="service-card-body">
+                        <ul class="service-features">
+                            <li>Business Setup & Licensing</li>
+                            <li>Contract Law & Compliance</li>
+                            <li>Intellectual Property</li>
+                            <li>Corporate Governance</li>
+                            <li>Dispute Resolution</li>
+                        </ul>
+                        <a href="service-legal.html" class="btn-primary">Learn More</a>
+                    </div>
                 </div>
-                <div class="service-card fade-in">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Financial Consulting</h3>
-                    <p>Optimize your financial performance with our UAE market expertise.</p>
-                    <ul class="service-features">
-                        <li>Financial Planning</li>
-                        <li>Tax Optimization</li>
-                        <li>Investment Advisory</li>
-                    </ul>
-                    <a href="service-financial.html" class="btn-primary">Learn More</a>
+                
+                <!-- Carte de conseil financier - NOUVELLE VERSION -->
+                <div class="service-card financial fade-in">
+                    <div class="service-card-header">
+                        <div class="service-icon-container">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Financial Consulting</h3>
+                        <p>Optimize your financial performance with our UAE market expertise.</p>
+                    </div>
+                    <div class="service-card-body">
+                        <ul class="service-features">
+                            <li>Financial Planning & Analysis</li>
+                            <li>Tax Optimization Strategies</li>
+                            <li>Investment Advisory</li>
+                            <li>Financial Risk Management</li>
+                            <li>Mergers & Acquisitions</li>
+                        </ul>
+                        <a href="service-financial.html" class="btn-primary">Learn More</a>
+                    </div>
                 </div>
-                <div class="service-card fade-in">
-                    <i class="fas fa-bullhorn"></i>
-                    <h3>Marketing Consulting</h3>
-                    <p>Develop your UAE presence with culturally adapted strategies.</p>
-                    <ul class="service-features">
-                        <li>Market Research</li>
-                        <li>Digital Marketing</li>
-                        <li>Brand Strategy</li>
-                    </ul>
-                    <a href="service-marketing.html" class="btn-primary">Learn More</a>
+                
+                <!-- Carte de conseil marketing - NOUVELLE VERSION -->
+                <div class="service-card marketing fade-in">
+                    <div class="service-card-header">
+                        <div class="service-icon-container">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>Marketing Consulting</h3>
+                        <p>Develop your UAE presence with culturally adapted strategies.</p>
+                    </div>
+                    <div class="service-card-body">
+                        <ul class="service-features">
+                            <li>Market Research & Analysis</li>
+                            <li>Digital Marketing Campaigns</li>
+                            <li>Brand Development</li>
+                            <li>Customer Experience Strategy</li>
+                            <li>Social Media Management</li>
+                        </ul>
+                        <a href="service-marketing.html" class="btn-primary">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1236,7 +1481,9 @@
                 <div class="value-card fade-in"><i class="fas fa-star"></i><h3>Professional Excellence</h3><p>We strive for excellence in every aspect of our work, committed to providing highest quality services.</p></div>
                 <div class="value-card fade-in"><i class="fas fa-user-cog"></i><h3>Personalized Approach</h3><p>Every client is unique. We understand your specific needs and develop customized solutions.</p></div>
                 <div class="value-card fade-in"><i class="fas fa-chart-bar"></i><h3>Measurable Results</h3><p>We focus on achieving clear objectives, tracking performance to guarantee your success.</p></div>
-                
+                <div class="value-card fade-in"><i class="fas fa-lock"></i><h3>Guaranteed Confidentiality</h3><p>We act with discretion and respect the confidentiality of your information.</p></div>
+                <div class="value-card fade-in"><i class="fas fa-handshake"></i><h3>Long-term Partnership</h3><p>We build lasting relationships with our clients, becoming your trusted partner.</p></div>
+                <div class="value-card fade-in"><i class="fas fa-lightbulb"></i><h3>Continuous Innovation</h3><p>We stay at the forefront of latest trends to offer innovative solutions.</p></div>
             </div>
         </div>
     </section>
@@ -1290,7 +1537,7 @@
                 <h2>Ready to Start Your Project in Dubai?</h2>
                 <p>Contact us today for a free consultation and discover how we can help you succeed.</p>
                 <a href="contact.html" class="btn-primary">Free consultation</a>
-            </div>
+           </div>
         </div>
     </section>
 
@@ -1370,4 +1617,3 @@
     </script>
 </body>
 </html>
-
