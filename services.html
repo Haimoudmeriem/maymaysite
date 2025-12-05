@@ -106,7 +106,7 @@
             margin-top:90px;
             height:500px;
             overflow:hidden;
-            background: linear-gradient(rgba(0, 38, 88, 0.7), rgba(0, 38, 88, 0.7)), url('img_maymay11.jpg');
+            background: linear-gradient(rgba(0, 38, 88, 0.7), rgba(0, 38, 88, 0.7)), url('images/img_maymay11.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -142,9 +142,20 @@
         /* ==================== BUTTONS ==================== */
         .btn-primary, .btn-secondary {
             display:inline-block;
-            padding:18px 40px;
-            border-radius:var(--border-radius);
-            text-decoration:none;
+            padding:15px 35px;
+             background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    
+
             font-weight:700;
             font-family:'Montserrat',sans-serif;
             font-size:1.1rem;
@@ -501,7 +512,7 @@
             <p class="section-subtitle">We offer integrated solutions to support every aspect of your business in the UAE market</p>
             
             <div class="service-detail">
-                <img src="img_maymay15.jpg" alt="Legal Consulting Services in Dubai" class="service-image">
+                <img src="images/img_maymay15.webp" alt="Legal Consulting Services in Dubai" class="service-image">
                 <div class="service-content">
                     <h3>Legal Consulting</h3>
                     <p>Navigate UAE's legal landscape with confidence. Our experts provide comprehensive support from business setup to ongoing compliance, ensuring your operations thrive in Dubai's dynamic market.</p>
@@ -518,7 +529,7 @@
             </div>
 
             <div class="service-detail">
-                <img src="img_maymay13.jpg" alt="Financial Consulting Dubai" class="service-image">
+                <img src="images/img_maymay13.webp" alt="Financial Consulting Dubai" class="service-image">
                 <div class="service-content">
                     <h3>Financial Consulting</h3>
                     <p>Optimize your financial performance with strategic consulting. We help businesses make informed decisions that drive profitability and sustainable growth in the UAE market.</p>
@@ -535,7 +546,7 @@
             </div>
 
             <div class="service-detail">
-                <img src="img_maymay12.jpg" alt="Marketing Consulting Dubai" class="service-image">
+                <img src="images/img_maymay12.webp" alt="Marketing Consulting Dubai" class="service-image">
                 <div class="service-content">
                     <h3>Marketing Consulting</h3>
                     <p>Build a powerful brand presence in the competitive UAE market. Our culturally adapted strategies resonate with both local and international audiences in Dubai.</p>
@@ -642,8 +653,7 @@
             <div class="cta-content">
                 <h2>Ready to Transform Your Business in Dubai?</h2>
                 <p>Contact us today to discuss how our services can drive your success.</p>
-                <a href="contact.html" class="btn-secondary">Start Your Journey</a>
-            </div>
+<a href="contact.html" class="btn-primary" id="start-journey-btn">Start Your Journey</a>            </div>
         </div>
     </section>
 
