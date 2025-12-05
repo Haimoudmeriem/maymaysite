@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Consulting - MayMay Consulting Dubai</title>
+    <title>Financial Consulting - MayMay Consulting Dubai</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -100,18 +100,18 @@
         .hamburger { display:none; flex-direction:column; cursor:pointer; padding:8px; background:rgba(255,255,255,0.9); border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
         .hamburger span { width:25px; height:3px; background:var(--dark-color); margin:3px 0; transition:var(--transition); border-radius:2px; }
 
-        /* ==================== HERO LEGAL AVEC BACKGROUND IMAGE ==================== */
-        .legal-hero {
+        /* ==================== HERO FINANCIAL AVEC BACKGROUND IMAGE ==================== */
+        .financial-hero {
             position:relative;
             margin-top:90px;
             height:500px;
             overflow:hidden;
-            background: linear-gradient(rgba(0, 38, 88, 0.7), rgba(0, 38, 88, 0.7)), url('images/img_maymay11.webp');
+            background: linear-gradient(rgba(0, 56, 168, 0.7), rgba(0, 56, 168, 0.7)), url('images/img_maymay11.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        .legal-hero-content {
+        .financial-hero-content {
             position:absolute;
             top:0; left:0; width:100%; height:100%;
             display:flex;
@@ -121,7 +121,7 @@
             padding:2rem;
             color:white;
         }
-        .legal-hero h1 {
+        .financial-hero h1 {
             font-size:4rem;
             font-weight:800;
             font-family:'Montserrat',sans-serif;
@@ -129,7 +129,7 @@
             line-height:1.1;
             text-shadow: 0 4px 20px rgba(0,0,0,0.6);
         }
-        .legal-hero p {
+        .financial-hero p {
             font-size:1.4rem;
             margin-bottom:2rem;
             opacity:0.95;
@@ -144,17 +144,17 @@
             display:inline-block;
             padding:18px 40px;
             border-radius:var(--border-radius);
+            text-decoration:none;
+            font-weight:700;
+            font-family:'Montserrat',sans-serif;
+            font-size:1.1rem;
+            transition:var(--transition);
              cursor: pointer;
     transition: all 0.3s ease;
     border: none;
     text-align: center;
     position: relative;
     z-index: 1000;
-            text-decoration:none;
-            font-weight:700;
-            font-family:'Montserrat',sans-serif;
-            font-size:1.1rem;
-            transition:var(--transition);
         }
         .btn-primary {
             background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));
@@ -398,8 +398,8 @@
 
         /* Responsive */
         @media (max-width: 992px) {
-            .legal-hero h1 { font-size: 3.5rem; }
-            .legal-hero { height: 450px; }
+            .financial-hero h1 { font-size: 3.5rem; }
+            .financial-hero { height: 450px; }
             .service-content { grid-template-columns: 1fr; gap: 3rem; }
         }
         @media (max-width: 768px) {
@@ -415,16 +415,16 @@
                 transition: var(--transition); 
             }
             .nav-menu.active { left: 0; }
-            .legal-hero h1 { font-size: 2.8rem; }
-            .legal-hero p { font-size: 1.2rem; }
-            .legal-hero { height: 400px; }
+            .financial-hero h1 { font-size: 2.8rem; }
+            .financial-hero p { font-size: 1.2rem; }
+            .financial-hero { height: 400px; }
             .process-steps { flex-direction: column; }
             .logo-main { font-size: 1.5rem; }
         }
         @media (max-width: 480px) {
-            .legal-hero h1 { font-size: 2.3rem; }
-            .legal-hero p { font-size: 1.1rem; }
-            .legal-hero { height: 350px; }
+            .financial-hero h1 { font-size: 2.3rem; }
+            .financial-hero p { font-size: 1.1rem; }
+            .financial-hero { height: 350px; }
             .section-title { font-size: 2.5rem; }
             .logo { gap: 10px; }
             .logo-main { font-size: 1.3rem; }
@@ -461,13 +461,13 @@
         </nav>
     </header>
 
-    <!-- HERO LEGAL AVEC BACKGROUND IMAGE -->
-    <section class="legal-hero">
-        <div class="legal-hero-content container">
+    <!-- HERO FINANCIAL AVEC BACKGROUND IMAGE -->
+    <section class="financial-hero">
+        <div class="financial-hero-content container">
             <div>
-                <h1>Legal Consulting Services</h1>
-                <p>Expert legal guidance for your business success in Dubai and UAE</p>
-                <a href="#contact" class="btn-primary">Get Legal Support</a>
+                <h1>Financial Consulting Services</h1>
+                <p>Strategic financial solutions to optimize your business performance in Dubai and UAE</p>
+                <a href="#contact" class="btn-primary">Get Financial Analysis</a>
             </div>
         </div>
     </section>
@@ -477,26 +477,26 @@
         <div class="container">
             <div class="service-content">
                 <div>
-                    <img src="images/img_maymay2.webp" alt="Legal Consulting Dubai" class="service-image">
+                    <img src="images/img_maymay5.webp" alt="Financial Consulting Dubai" class="service-image">
                 </div>
                 <div class="service-details">
-                    <h2>Comprehensive Legal Solutions</h2>
-                    <p>Navigate the complex legal landscape of the UAE with confidence. Our expert legal team provides comprehensive support for all your business needs, from initial setup to ongoing compliance.</p>
-                    <p>We specialize in UAE business law, ensuring your operations remain compliant while maximizing opportunities for growth and expansion in Dubai's dynamic market.</p>
+                    <h2>Strategic Financial Management</h2>
+                    <p>Maximize your financial performance with our comprehensive consulting services tailored for the UAE market. Our financial experts provide data-driven insights to optimize your financial strategy.</p>
+                    <p>We specialize in financial planning, analysis, and optimization strategies designed specifically for businesses operating in Dubai's dynamic economic environment.</p>
                     
-                    <h3>Our Legal Expertise</h3>
+                    <h3>Our Financial Expertise</h3>
                     <ul class="service-features">
-                        <li>Business formation and company registration in UAE</li>
-                        <li>Licensing and regulatory compliance for Dubai businesses</li>
-                        <li>Contract drafting and review for local and international agreements</li>
-                        <li>Intellectual property protection in the Gulf region</li>
-                        <li>Employment law and UAE labor regulations</li>
-                        <li>Dispute resolution and legal representation in Dubai courts</li>
-                        <li>Mergers and acquisitions legal support</li>
-                        <li>Corporate governance and compliance</li>
+                        <li>Financial planning and budgeting for UAE businesses</li>
+                        <li>Cash flow management and optimization strategies</li>
+                        <li>Investment analysis and portfolio management</li>
+                        <li>Financial risk assessment and mitigation</li>
+                        <li>Tax planning and optimization in UAE</li>
+                        <li>Business valuation and financial modeling</li>
+                        <li>Mergers and acquisitions financial advisory</li>
+                        <li>Financial compliance and reporting</li>
                     </ul>
 
-                    <a href="contact.html" class="btn-primary">Schedule Legal Consultation</a>
+                    <a href="contact.html" class="btn-primary">Schedule Financial Consultation</a>
                 </div>
             </div>
         </div>
@@ -505,25 +505,25 @@
     <!-- STATS SECTION -->
     <section class="section section-light">
         <div class="container">
-            <h2 class="section-title">Legal Excellence & Results</h2>
-            <p class="section-subtitle">Our legal expertise delivers measurable success for businesses in Dubai</p>
+            <h2 class="section-title">Proven Financial Results</h2>
+            <p class="section-subtitle">Our financial strategies deliver measurable impact for businesses in Dubai</p>
             
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Business Setup Success Rate</div>
+                    <div class="stat-number">25%</div>
+                    <div class="stat-label">Average Cost Reduction</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Companies Successfully Registered</div>
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Revenue Growth</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">24h</div>
-                    <div class="stat-label">Average Document Processing Time</div>
+                    <div class="stat-number">35%</div>
+                    <div class="stat-label">Profit Margin Increase</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Regulatory Compliance Rate</div>
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Improved Cash Flow</div>
                 </div>
             </div>
         </div>
@@ -532,29 +532,29 @@
     <!-- PROCESS SECTION -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Our Legal Process</h2>
-            <p class="section-subtitle">A structured approach to ensuring your legal compliance and business protection</p>
+            <h2 class="section-title">Our Financial Process</h2>
+            <p class="section-subtitle">A structured approach to optimizing your financial performance</p>
             
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>Initial Assessment</h3>
-                    <p>Comprehensive analysis of your business needs and legal requirements in UAE.</p>
+                    <h3>Financial Assessment</h3>
+                    <p>Comprehensive analysis of your current financial position and business objectives.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <h3>Strategy Development</h3>
-                    <p>Custom legal strategy tailored to your specific business objectives and UAE regulations.</p>
+                    <p>Custom financial strategy tailored to your specific goals and market conditions.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Implementation</h3>
-                    <p>Efficient execution of legal procedures, documentation, and compliance requirements.</p>
+                    <p>Execution of financial optimization strategies with measurable KPIs.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">4</div>
-                    <h3>Ongoing Support</h3>
-                    <p>Continuous legal monitoring and support to ensure ongoing compliance and protection.</p>
+                    <h3>Performance Monitoring</h3>
+                    <p>Continuous tracking and adjustment of financial strategies for optimal results.</p>
                 </div>
             </div>
         </div>
@@ -564,9 +564,9 @@
     <section class="cta" id="contact">
         <div class="container">
             <div class="cta-content">
-                <h2>Need Expert Legal Guidance in Dubai?</h2>
-                <p>Contact us today for a free legal consultation and ensure your business is fully compliant and protected.</p>
-                <a href="contact.html" class="btn-secondary">Free Legal Consultation</a>
+                <h2>Ready to Optimize Your Financial Performance?</h2>
+                <p>Contact us today for a free financial consultation and discover how we can transform your business finances.</p>
+                <a href="contact.html" class="btn-secondary">Free Financial Analysis</a>
             </div>
         </div>
     </section>
